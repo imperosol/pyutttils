@@ -22,4 +22,4 @@ deploy:
   local_dir: ./docs/_build/html
   committer_from_gh: true
   on:
-    branch: gh-pages
+    branch: master
