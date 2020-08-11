@@ -1,0 +1,25 @@
+language: python
+
+python:
+  - "3.8"
+
+name: Build docs
+
+install:
+  - pip install pipenv
+  - pipenv install --dev
+
+script:
+  - cd docs
+  - make html
+  - touch _build/html/.nojekyll
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  local_dir: ./docs/_build/html
+  committer_from_gh: true
+  on:
+    branch: gh-pages
