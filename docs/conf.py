@@ -23,7 +23,7 @@ copyright = '2020, Ivann LARUELLE'
 author = 'Ivann LARUELLE'
 
 # The full version, including alpha/beta/rc tags
-release = '0.0.1'
+release = '0.0.3'
 
 
 # -- General configuration ---------------------------------------------------
