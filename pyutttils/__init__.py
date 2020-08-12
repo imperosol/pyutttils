@@ -1,1 +1,1 @@
-import utt_auth.py
+import utt_auth
