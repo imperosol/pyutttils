@@ -9,8 +9,7 @@ install:
   - pipenv install --dev
 script:
   - python3 setup.py sdist bdist_wheel
-  - cd docs
-  - make html
+  - docs/make html
   - touch _build/html/.nojekyll
 deploy:
   - provider: pages
