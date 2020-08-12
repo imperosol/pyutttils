@@ -25,6 +25,7 @@ deploy:
       branch: master
   - provider: pypi
     skip_cleanup: true
+    skip_existing: true
     distributions: "sdist bdist_wheel"
     username: "__token__"
     password:
