@@ -9,8 +9,11 @@ install:
   - pipenv install --dev
 script:
   - python3 setup.py sdist bdist_wheel
-  - docs/make html
+  - cd docs
+  - make html
   - touch _build/html/.nojekyll
+before_deploy:
+  - cd $TRAVIS_BUILD_DIR
 deploy:
   - provider: pages
     skip_cleanup: true
