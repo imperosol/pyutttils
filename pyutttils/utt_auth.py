@@ -4,7 +4,7 @@ import requests
 import re
 
 
-def smtp(identifiant: str = "", mdp: str = "") -> stmplib.SMTP_SSL:
+def smtp(identifiant: str = "", mdp: str = "") -> smtplib.SMTP_SSL:
     """Permet d'initier une session SMTP sécurisée sur le serveur mail de l'UTT, soit de manière manuelle, soit de manière
         automatique en fournissant id et mdp
 
@@ -47,7 +47,8 @@ def smtp(identifiant: str = "", mdp: str = "") -> stmplib.SMTP_SSL:
                 raise mail_exception
 
 
-def cas(service, identifiant="", mdp="", session_web=requests.Session()):
+def cas(service: str, identifiant: str = "", mdp: str = "", session_web: requests.Session = requests.Session())\
+        -> requests.Session:
     """Permet d'initier une session web sur un service via le CAS de l'UTT, soit de manière manuelle, soit de manière
     automatique en fournissant id, mdp, et session web si besoin
 
@@ -71,14 +72,13 @@ def cas(service, identifiant="", mdp="", session_web=requests.Session()):
     :raises Exception: Si l'id/mdp ne sont pas corrects ou connexion impossible au CAS
 
     """
-    connecte = False
-    while not connecte:
+    while True:
         session_web.headers.update(
             {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0'})
-        test_connexion_service = session_web.get(service, allow_redirects="True", headers=session_web.headers)
+        test_connexion_service = session_web.get(service, allow_redirects=True, headers=session_web.headers)
         texte = test_connexion_service.content.decode('utf-8')
         match_valeur_lt = re.search('name=\"lt\" value=\"(.*)?\"', texte)
-        manuel = bool(mdp == "" or identifiant == "")
+        manuel = mdp == "" or identifiant == ""
         # On informe l'utilisateur du service sur lequel il se connecte
         if manuel:
             print("Vous allez vous connecter au service suivant : " + service)
@@ -95,17 +95,6 @@ def cas(service, identifiant="", mdp="", session_web=requests.Session()):
         if not connecte:
             print("Erreur de connexion, veuillez ressaisir vos identifiants !\n")
             if not manuel:
-                del mdp
-                del identifiant
-                del donnees
-                del reponse_connexion
                 raise Exception("Identifiants invalides ou connexion au serveur impossible")
-            else:
-                identifiant = ""
-                mdp = ""
-    print("\n\nCONNECTE AU SI !\n")
-    del mdp
-    del identifiant
-    del donnees
-    del reponse_connexion
-    return session_web
+        print("\n\nCONNECTE AU SI !\n")
+        return session_web
