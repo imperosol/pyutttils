@@ -1,4 +1,4 @@
-name: Build and publish docs
+name: Build docs and publish to github pages
 
 # Controls when the workflow will run
 on:
