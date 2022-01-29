@@ -12,6 +12,3 @@ sphinx-rtd-theme = "*"
 setuptools = "*"
 wheel = "*"
 twine = "*"
-
-[requires]
-python_version = "3.8"
