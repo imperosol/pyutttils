@@ -21,7 +21,7 @@ jobs:
         name: "Install Pipenv"
       - run: "pipenv install --dev"
         name: "Install dependencies"
-      - run: "pipenv run setup.py sdist bdist_wheel"
+      - run: "pipenv run python setup.py sdist bdist_wheel"
       - run: "cd docs && pipenv run make html"
         name: "Make docs"
       - run: "touch docs/_build/html/.nojekyll"
