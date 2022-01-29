@@ -4,7 +4,7 @@ import requests
 import re
 
 
-def smtp(identifiant="", mdp=""):
+def smtp(identifiant: str = "", mdp: str = "") -> stmplib.SMTP_SSL:
     """Permet d'initier une session SMTP sécurisée sur le serveur mail de l'UTT, soit de manière manuelle, soit de manière
         automatique en fournissant id et mdp
 
@@ -27,9 +27,8 @@ def smtp(identifiant="", mdp=""):
     server_connecte = smtplib.SMTP_SSL('mail.utt.fr')
     server_connecte.connect('mail.utt.fr')
     server_connecte.ehlo()
-    connecte = False
-    manuel = bool(mdp == "" or identifiant == "")
-    while not connecte:
+    manuel = mdp == "" or identifiant == ""
+    while True:
         # On informe l'utilisateur du service sur lequel il se connecte
         if manuel:
             print("Vous allez vous connecter au service de mail de l'UTT\n")
@@ -40,21 +39,12 @@ def smtp(identifiant="", mdp=""):
             return server_connecte
         except smtplib.SMTPAuthenticationError as mail_exception:
             print("Combinaison identifiant / mdp invalide")
-            connecte = False
-            if manuel:
-                identifiant = ""
-                mdp = ""
-            else:
-                del identifiant
-                del mdp
+            if not manuel:
                 raise mail_exception
         except Exception as mail_exception:
-            connecte = False
             print(mail_exception)
             if not manuel:
                 raise mail_exception
-    del identifiant
-    del mdp
 
 
 def cas(service, identifiant="", mdp="", session_web=requests.Session()):
