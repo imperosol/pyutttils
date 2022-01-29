@@ -22,7 +22,7 @@ jobs:
       - run: "pipenv install --dev"
         name: "Install dependencies"
       - run: "python3 setup.py sdist bdist_wheel"
-      - run: "cd docs && make html"
+      - run: "cd docs && pipenv run make html"
         name: "Make docs"
       - run: "touch docs/_build/html/.nojekyll"
       - name: "Deploy to github pages"
