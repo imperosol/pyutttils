@@ -1,68 +1,34 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="fr" >
 <head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Authentification &mdash; Documentation pyutttils 0.0.3</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-
-  
-  
-  
-  
-
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
         <script src="../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
     <link rel="prev" title="Pyutttils, le package de fonctions utilitaires pour l’UTT" href="../index.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> pyutttils
-          
-
-          
+            <a href="../index.html" class="icon icon-home"> pyutttils
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Rechercher docs" />
@@ -70,92 +36,42 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Table des matières:</span></p>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table des matières:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Authentification</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">pyutttils</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
       <li>Authentification</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-            
             <a href="../_sources/rst/utt_auth.rst.txt" rel="nofollow"> Afficher la source de la page</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="authentification">
-<h1>Authentification<a class="headerlink" href="#authentification" title="Lien permanent vers ce titre">¶</a></h1>
+             
+  <section id="authentification">
+<h1>Authentification<a class="headerlink" href="#authentification" title="Lien permanent vers ce titre"></a></h1>
 <p>Ajout de la possibilité de s’authentifier sur les serveurs de l’UTT</p>
 <span class="target" id="module-utt_auth"></span><dl class="py function">
-<dt id="utt_auth.cas">
-<code class="sig-prename descclassname">utt_auth.</code><code class="sig-name descname">cas</code><span class="sig-paren">(</span><em class="sig-param">service</em>, <em class="sig-param">identifiant=''</em>, <em class="sig-param">mdp=''</em>, <em class="sig-param">session_web=&lt;requests.sessions.Session object&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#utt_auth.cas" title="Lien permanent vers cette définition">¶</a></dt>
+<dt class="sig sig-object py" id="utt_auth.cas">
+<span class="sig-prename descclassname"><span class="pre">utt_auth.</span></span><span class="sig-name descname"><span class="pre">cas</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">service:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">identifiant:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mdp:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session_web:</span> <span class="pre">requests.sessions.Session</span> <span class="pre">=</span> <span class="pre">&lt;requests.sessions.Session</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">requests.sessions.Session</span></span></span><a class="headerlink" href="#utt_auth.cas" title="Lien permanent vers cette définition"></a></dt>
 <dd><p>Permet d’initier une session web sur un service via le CAS de l’UTT, soit de manière manuelle, soit de manière
 automatique en fournissant id, mdp, et session web si besoin</p>
 <dl class="field-list simple">
@@ -186,8 +102,8 @@ automatique en fournissant id, mdp, et session web si besoin</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="utt_auth.smtp">
-<code class="sig-prename descclassname">utt_auth.</code><code class="sig-name descname">smtp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">identifiant</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">mdp</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#utt_auth.smtp" title="Lien permanent vers cette définition">¶</a></dt>
+<dt class="sig sig-object py" id="utt_auth.smtp">
+<span class="sig-prename descclassname"><span class="pre">utt_auth.</span></span><span class="sig-name descname"><span class="pre">smtp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifiant</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mdp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">smtplib.SMTP_SSL</span></span></span><a class="headerlink" href="#utt_auth.smtp" title="Lien permanent vers cette définition"></a></dt>
 <dd><p>Permet d’initier une session SMTP sécurisée sur le serveur mail de l’UTT, soit de manière manuelle, soit de manière
 automatique en fournissant id et mdp</p>
 <dl class="field-list simple">
@@ -218,60 +134,36 @@ automatique en fournissant id et mdp</p>
 </dl>
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-      
-        <a href="../index.html" class="btn btn-neutral float-left" title="Pyutttils, le package de fonctions utilitaires pour l’UTT" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Précédent</a>
-      
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Pyutttils, le package de fonctions utilitaires pour l’UTT" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        
-        &copy; Copyright 2020, Ivann LARUELLE
-
-    </p>
+    <p>&#169; Copyright 2020, Ivann LARUELLE.</p>
   </div>
-    
-    
-    
-    Compilé avec <a href="http://sphinx-doc.org/">Sphinx</a> en utilisant un
-    
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">thème</a>
-    
-    fourni par <a href="https://readthedocs.org">Read the Docs</a>. 
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
-
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
