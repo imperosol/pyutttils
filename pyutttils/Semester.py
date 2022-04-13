@@ -1,5 +1,12 @@
 class Semester:
-    def __init__(self, identifier):
+
+    def __init__(self, identifier: str):
+        """
+        Créée un semestre à partir d'une chaine de caractère ("P22, "P2022", "Automne 2022").
+        Si l'année est au format court ("22"), alors l'année réelle sera 2022.
+
+        :param str identifier: "P22", "P2022", "Automne 2022"
+        """
         self.short_season = identifier[0]
         if self.short_season == "A":
             self.full_season = "Automne"
