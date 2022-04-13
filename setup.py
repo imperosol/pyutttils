@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="pyutttils",  # Replace with your own username
-    version="0.0.4",
+    version="0.1.0",
     author="Ivann LARUELLE",
     author_email="ivann@laruelle.me",
     description="Package de fonctions utilitaires pour l'Université de Technologie de Troyes (UTT)",
